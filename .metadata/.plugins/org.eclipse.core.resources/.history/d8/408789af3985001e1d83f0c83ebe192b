@@ -1,0 +1,43 @@
+package com.cricket.api.services.impl;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+import com.cricket.api.entities.Match;
+import com.cricket.api.repositories.MatchRepo;
+import com.cricket.api.services.MatchService;
+
+@Service
+public class MatchServiceImpl implements MatchService
+{
+	
+	private MatchRepo matchRepo;
+	
+	//Constructor Injection
+	public MatchServiceImpl(MatchRepo matchRepo) {
+		super();
+		this.matchRepo = matchRepo;
+	}
+
+	//Matches History all matches available in our database
+	@Override
+	public List<Match> getAllMatches() {
+		
+		return this.matchRepo.findAll();
+	}
+
+	@Override
+	public List<Match> getLiveMatches() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Map<String, String>> getPointTable() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

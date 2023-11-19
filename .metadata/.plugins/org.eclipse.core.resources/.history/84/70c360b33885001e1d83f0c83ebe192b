@@ -1,0 +1,15 @@
+package com.cricket.api.services;
+
+import java.util.*;
+
+public class MatchServices 
+{
+	//get All Matches
+		List<Match> getAllMatches();
+		
+	   //get Live Matches
+		List<Match> getLiveMatches();
+		
+		//get Cricket World Cup 2023 point table
+		List<Map<String,String>> getPointTable();
+}

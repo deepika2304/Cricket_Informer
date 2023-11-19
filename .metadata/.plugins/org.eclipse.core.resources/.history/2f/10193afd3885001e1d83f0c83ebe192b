@@ -1,0 +1,8 @@
+package com.cricket.api.services.impl;
+
+import com.cricket.api.services.MatchService;
+
+public class MatchServiceImpl implements MatchService
+{
+
+}
